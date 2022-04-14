@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Picker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Color Picker</h1>
+    
+    <!-- Navigation (toggle between tabs) - Start -->
+    <nav id="tabs-nav">
+        <button id="tab-hsla" class="tab">hsla</button>
+        <button id="tab-rgba" class="tab hidden-tab">rgba</button>
+    </nav>
+    <!-- Navigation (toggle between tabs) - End -->
+
+    <!-- Section - Start -->
+    <section id="section-hsla" class="section-container active-picker">
+      <h2>HSLA</h2>
+      <!-- Hsla picker - Start -->
+      <div class="picker-container">        
+        <div class="range-inputs-container">
+
+          <!-- Single input - Start -->
+          <form class="form">
+            <div class="label-container">
+              <label for="hue-hsla">hue</label>
+              <span class="rel-input-value"><span>0</span><span>°</span></span>
+            </div>
+            <div class="input-container">
+              <input id="hue-hsla" type="range" name="hue" min="0" max="360" step="1" value="0">
+              <div class="min-max-range">
+                <span>0°</span>
+                <span>360°</span>
+              </div>
+            </div>
+          </form>
+          <!-- Single input - End -->
+
+          <!-- Single input - Start -->
+          <form class="form">
+            <div class="label-container">
+              <label for="saturation-hsla">saturation</label>
+              <span class="rel-input-value"><span>70</span><span>%</span></span>
+            </div>
+            <div class="input-container">
+              <input id="saturation-hsla" type="range" name="saturation" min="0" max="100" step="1" value="70">
+              <div class="min-max-range">
+                <span>0</span>
+                <span>100%</span>
+              </div>
+            </div>
+          </form>
+          <!-- Single input - End -->
+
+          <!-- Single input - Start -->
+          <form class="form">
+            <div class="label-container">
+              <label for="lightness-hsla">lightness</label>
+              <span class="rel-input-value"><span>50</span><span>%</span></span>
+            </div>
+            <div class="input-container">
+              <input id="lightness-hsla" type="range" name="lightness" min="0" max="100" step="1" value="50">
+              <div class="min-max-range">
+                <span>0</span>
+                <span>100%</span>
+              </div>
+            </div>
+          </form>
+          <!-- Single input - End -->
+
+          <!-- Single input - Start -->
+          <form class="form">
+            <div class="label-container">
+              <label for="alpha-hsla">alpha</label>
+              <span class="rel-input-value"><span>1</span></span>
+            </div>
+            <div class="input-container">
+              <input id="alpha-hsla" type="range" name="alpha" min="0" max="1" step="0.01" value="1">
+              <div class="min-max-range">
+                <span>0</span>
+                <span>1</span>
+              </div>
+            </div>
+          </form>
+          <!-- Single input - End -->
+        </div>
+
+        <!-- Picker output - Start -->
+        <div class="output-color-container">
+          <div class="output-box-container">
+            <div id="hsla-output-color" class="output-color-box" style="background-color: hsla(0, 100%, 50%, 1);"></div>
+          </div>
+          <div class="output-value-container">
+            <p id="hsla-output-value">hsla(0, 100%, 50%, 1);</p>
+            <button class="copy-button">copy</button>
+          </div>
+        </div>
+        <!-- Picker output - End -->
+      </div>
+      <!-- Hsla picker - End -->
+    </section>
+    <!-- Section - End -->
+
+    <!-- Section - Start -->
+    <section id="section-rgba" class="section-container hidden-picker">
+      <h2>RGBA</h2>
+
+      <!-- Rgba picker - Start -->
+      <div class="picker-container">
+        <div class="range-inputs-container">
+
+          <!-- Single input - Start -->
+          <form class="form">
+            <div class="label-container">
+              <label for="red-rgba">red</label>
+              <span class="rel-input-value"><span>217</span></span>
+            </div>
+            <div class="input-container">
+              <input id="red-rgba" type="range" name="red" min="0" max="255" step="1" value="217">
+              <div class="min-max-range">
+                <span>0</span>
+                <span>255</span>
+              </div>
+            </div>
+          </form>
+          <!-- Single input - End -->
+
+          <!-- Single input - Start -->
+          <form class="form">
+            <div class="label-container">
+              <label for="green-rgba">green</label>
+              <span class="rel-input-value"><span>38</span></span>
+            </div>
+            <div class="input-container">
+              <input id="green-rgba" type="range" name="green" min="0" max="255" step="1" value="38">
+              <div class="min-max-range">
+                <span>0</span>
+                <span>255</span>
+              </div>
+            </div>
+          </form>
+          <!-- Single input - End -->
+
+          <!-- Single input - Start -->
+          <form class="form">
+            <div class="label-container">
+              <label for="blue-rgba">blue</label>
+              <span class="rel-input-value"><span>38</span></span>
+            </div>
+            <div class="input-container">
+              <input id="blue-rgba" type="range" name="blue" min="0" max="255" step="1" value="38">
+              <div class="min-max-range">
+                <span>0</span>
+                <span>255</span>
+              </div>
+            </div>
+          </form>
+          <!-- Single input - End -->
+
+          <!-- Single input - Start -->
+          <form class="form">
+            <div class="label-container">
+              <label for="alpha-rgba">alpha</label>
+              <span class="rel-input-value"><span>1</span></span>
+            </div>
+            <div class="input-container">
+              <input id="alpha-rgba" type="range" name="alpha" min="0" max="1" step="0.01" value="1">
+              <div class="min-max-range">
+                <span>0</span>
+                <span>1</span>
+              </div>
+            </div>
+          </form>
+          <!-- Single input - End -->
+        </div>
+
+        <!-- Picker output - Start -->
+        <div class="output-color-container">
+          <div class="output-box-container">
+            <div id="rgba-output-color" class="output-color-box" style="background-color: rgba(255, 0, 0, 1);"></div>
+          </div>
+          <div class="output-value-container">
+            <p id="rgba-output-value">rgba(255, 0, 0, 1);</p>
+            <button class="copy-button">copy</button>
+          </div>
+        </div>
+        <!-- Picker output - End -->
+      </div>
+      <!-- Rgba picker - End -->
+    </section>
+    <!-- Section - End -->
+  </main>
+</body>
+</html>
